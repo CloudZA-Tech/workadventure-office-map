@@ -1,0 +1,236 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "./office_base.tmj",
+  "areas": [
+    {
+      "id": "lobby-start",
+      "x": 96,
+      "y": 128,
+      "width": 64,
+      "height": 64,
+      "visible": true,
+      "name": "reception-start",
+      "properties": [
+        {
+          "id": "lobby-start-p",
+          "type": "start",
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "id": "lobby-reception",
+      "x": 32,
+      "y": 96,
+      "width": 192,
+      "height": 128,
+      "visible": true,
+      "name": "CloudZA Plex \u2014 Reception",
+      "properties": [
+        {
+          "id": "lobby-reception-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Welcome to CloudZA, dankie for popping in! Grab a spot in the central lift bank and ride up to any of our team floors, or head to the Townhall for all-hands gatherings.",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "lobby-board",
+      "x": 32,
+      "y": 96,
+      "width": 96,
+      "height": 32,
+      "visible": true,
+      "name": "\ud83d\udccb Welcome to CloudZA \u2014 Sign In & Say Hello",
+      "properties": [
+        {
+          "id": "lobby-board-web",
+          "type": "openWebsite",
+          "link": "https://REPLACE-ME.example.com/cloudza-lobby-welcome",
+          "trigger": "onaction",
+          "newTab": false,
+          "closable": true,
+          "width": 50,
+          "buttonLabel": "Open the plex welcome board",
+          "application": "website"
+        }
+      ]
+    },
+    {
+      "id": "lobby-lift-alpha",
+      "x": 768,
+      "y": 256,
+      "width": 192,
+      "height": 32,
+      "visible": true,
+      "name": "\ud83d\uded7 Lift \u2192 Team Alpha (Floor 1)",
+      "properties": [
+        {
+          "id": "lobby-lift-alpha-hl",
+          "type": "highlight",
+          "color": "#2f6fed",
+          "opacity": 0.35
+        },
+        {
+          "id": "lobby-lift-alpha-exit",
+          "type": "exit",
+          "url": "floor_alpha.wam",
+          "areaName": "from-lobby"
+        }
+      ]
+    },
+    {
+      "id": "lobby-lift-bravo",
+      "x": 768,
+      "y": 320,
+      "width": 192,
+      "height": 32,
+      "visible": true,
+      "name": "\ud83d\uded7 Lift \u2192 Team Bravo (Floor 2)",
+      "properties": [
+        {
+          "id": "lobby-lift-bravo-hl",
+          "type": "highlight",
+          "color": "#1f9d55",
+          "opacity": 0.35
+        },
+        {
+          "id": "lobby-lift-bravo-exit",
+          "type": "exit",
+          "url": "floor_bravo.wam",
+          "areaName": "from-lobby"
+        }
+      ]
+    },
+    {
+      "id": "lobby-lift-charlie",
+      "x": 768,
+      "y": 384,
+      "width": 192,
+      "height": 32,
+      "visible": true,
+      "name": "\ud83d\uded7 Lift \u2192 Team Charlie (Floor 3)",
+      "properties": [
+        {
+          "id": "lobby-lift-charlie-hl",
+          "type": "highlight",
+          "color": "#e0a800",
+          "opacity": 0.35
+        },
+        {
+          "id": "lobby-lift-charlie-exit",
+          "type": "exit",
+          "url": "floor_charlie.wam",
+          "areaName": "from-lobby"
+        }
+      ]
+    },
+    {
+      "id": "lobby-lift-townhall",
+      "x": 640,
+      "y": 544,
+      "width": 224,
+      "height": 64,
+      "visible": true,
+      "name": "\ud83d\uded7 Lift \u2192 Townhall (All-Hands)",
+      "properties": [
+        {
+          "id": "lobby-lift-townhall-hl",
+          "type": "highlight",
+          "color": "#8a6d3b",
+          "opacity": 0.3
+        },
+        {
+          "id": "lobby-lift-townhall-exit",
+          "type": "exit",
+          "url": "townhall.wam",
+          "areaName": "from-lobby"
+        }
+      ]
+    },
+    {
+      "id": "lobby-from-alpha",
+      "x": 288,
+      "y": 128,
+      "width": 32,
+      "height": 32,
+      "visible": true,
+      "name": "from-alpha",
+      "properties": [
+        {
+          "id": "lobby-from-alpha-p",
+          "type": "start"
+        }
+      ]
+    },
+    {
+      "id": "lobby-from-bravo",
+      "x": 352,
+      "y": 128,
+      "width": 32,
+      "height": 32,
+      "visible": true,
+      "name": "from-bravo",
+      "properties": [
+        {
+          "id": "lobby-from-bravo-p",
+          "type": "start"
+        }
+      ]
+    },
+    {
+      "id": "lobby-from-charlie",
+      "x": 416,
+      "y": 128,
+      "width": 32,
+      "height": 32,
+      "visible": true,
+      "name": "from-charlie",
+      "properties": [
+        {
+          "id": "lobby-from-charlie-p",
+          "type": "start"
+        }
+      ]
+    },
+    {
+      "id": "lobby-from-townhall",
+      "x": 480,
+      "y": 128,
+      "width": 32,
+      "height": 32,
+      "visible": true,
+      "name": "from-townhall",
+      "properties": [
+        {
+          "id": "lobby-from-townhall-p",
+          "type": "start"
+        }
+      ]
+    }
+  ],
+  "entities": {},
+  "entityCollections": [
+    {
+      "url": "http://play.workadventure.localhost/collections/FurnitureCollection.json",
+      "type": "file"
+    },
+    {
+      "url": "http://play.workadventure.localhost/collections/OfficeCollection.json",
+      "type": "file"
+    }
+  ],
+  "settings": {
+    "megaphone": {
+      "enabled": true,
+      "title": "CloudZA Plex \u2014 Lobby"
+    }
+  },
+  "metadata": {
+    "name": "CloudZA Plex \u2014 Lobby",
+    "description": "Welcome to CloudZA, dankie for popping in! Grab a spot in the central lift bank and ride up to any of our team floors, or head to the Townhall for all-hands gatherings.",
+    "thumbnail": "office.png",
+    "copyright": null
+  }
+}

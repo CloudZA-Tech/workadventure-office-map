@@ -1,0 +1,30 @@
+{
+  "lobby": {
+    "directoryBlurb": "Welcome to CloudZA, dankie for popping in! Grab a spot in the central lift bank and ride up to any of our team floors, or head to the Townhall for all-hands gatherings.",
+    "welcome": {"label": "📋 Welcome to CloudZA — Sign In & Say Hello", "placeholderUrl": "https://REPLACE-ME.example.com/cloudza-lobby-welcome"},
+    "liftLabels": {"alpha": "🛗 Lift → Team Alpha (Floor 1)", "bravo": "🛗 Lift → Team Bravo (Floor 2)", "charlie": "🛗 Lift → Team Charlie (Floor 3)", "townhall": "🛗 Lift → Townhall (All-Hands)"}
+  },
+  "floors": [
+    {"teamKey":"alpha","teamName":"Team Alpha","accentColor":"#2f6fed","tagline":"Ship it, scale it, own it.",
+     "floorDescription":"The blue-lit Team Alpha floor where CloudZA's product and platform engineers turn ideas into shipping software, ringed by focus offices, a war room, and a coffee-fuelled breakout nook.",
+     "leader":{"name":"Thandeka Mabaso","title":"Head of Platform Engineering"},
+     "members":[{"name":"Sipho Ndlovu","role":"Senior Backend Engineer"},{"name":"Charl van der Merwe","role":"Site Reliability Engineer"},{"name":"Aisha Patel","role":"Frontend Engineer"},{"name":"Lerato Mokoena","role":"Product Designer"}],
+     "meetingRoom":{"name":"Alpha War Room","jitsiSlug":"cloudza-alpha-war-room"},
+     "breakout":{"name":"The Rooibos Lounge","blurb":"Grab a cuppa, swap war stories, and rubber-duck your gnarliest bug with a teammate."},
+     "noticeBoard":{"label":"Alpha Notice Board","placeholderUrl":"https://REPLACE-ME.example.com/alpha-notice-board"}},
+    {"teamKey":"bravo","teamName":"Team Bravo","accentColor":"#1f9d55","tagline":"Keep it up, keep it green.",
+     "floorDescription":"The green-lit Team Bravo floor where CloudZA's SRE crew keeps the platform humming, tames incidents, and turns 3am pages into boring dashboards.",
+     "leader":{"name":"Thandeka Mokoena","title":"Head of Site Reliability Engineering"},
+     "members":[{"name":"Ruan Pretorius","role":"Senior Platform Engineer"},{"name":"Naledi Dlamini","role":"Incident & On-Call Lead"},{"name":"Yusuf Adams","role":"Cloud Infrastructure Engineer"},{"name":"Lerato Nkosi","role":"Observability & Reliability Engineer"}],
+     "meetingRoom":{"name":"The War Room (Incident Bridge)","jitsiSlug":"cloudza-bravo-war-room"},
+     "breakout":{"name":"The Green Room","blurb":"Grab a rooibos, decompress after a deploy, and swap war stories where nothing is on fire."},
+     "noticeBoard":{"label":"Bravo Ops Board — runbooks, on-call roster & incident retros","placeholderUrl":"https://REPLACE-ME.example.com/bravo-ops-board"}},
+    {"teamKey":"charlie","teamName":"Team Charlie","accentColor":"#e0a800","tagline":"Turning raw data into gold.",
+     "floorDescription":"The amber-lit Charlie floor where CloudZA's data and AI crew mine insight from noise, ship models, and keep the pipelines humming.",
+     "leader":{"name":"Naledi Khumalo","title":"Head of Data & AI"},
+     "members":[{"name":"Tumelo Sithole","role":"Machine Learning Engineer"},{"name":"Anja van Rensburg","role":"Data Engineer"},{"name":"Rudzani Mahlangu","role":"Analytics Engineer"},{"name":"Kayleigh Naidoo","role":"Data Scientist"}],
+     "meetingRoom":{"name":"The Feature Store","jitsiSlug":"cloudza-charlie-feature-store"},
+     "breakout":{"name":"The Data Lake Lounge","blurb":"Grab a coffee, dip into the data lake, and let your best ideas float to the surface."},
+     "noticeBoard":{"label":"Charlie Model Board","placeholderUrl":"https://REPLACE-ME.example.com/charlie-model-board"}}
+  ]
+}

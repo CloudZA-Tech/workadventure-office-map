@@ -1,17 +1,24 @@
-# 🏢 CloudZA WorkAdventure Office Map
+# 🏙️ CloudZA Plex — WorkAdventure virtual HQ
 
-A rich, functional virtual office for [WorkAdventure](https://workadventu.re) — reception,
-open-plan desks, Jitsi meeting rooms, café, quiet library, 1:1 booths and an all-hands
-townhall/event space across **two linked maps**.
+A multi-floor virtual HQ for [WorkAdventure](https://workadventu.re): a ground-floor
+**Lobby** (spawn) linked by a central **lift** to **three team floors** (Alpha / Bravo /
+Charlie) and an all-hands **Townhall** — **five linked rooms**, 48 functional zones.
 
-👉 **See [OFFICE_MAP_GUIDE.md](./OFFICE_MAP_GUIDE.md)** for the room/zone layout, the
-placeholder URLs to customise, how to edit the map live in the in-app Map Editor, and how
-it is wired into the running stack.
+Each team floor has a **team-leader office**, **four private member offices**, a **Jitsi
+team meeting room**, a **breakout nook** and a **notice board**; the Townhall has a
+**megaphone stage** + audience and two overflow Jitsi rooms. Team identity is colour-coded
+with WorkAdventure area highlights (Alpha 🔵, Bravo 🟢, Charlie 🟡).
 
-![office map thumbnail](./office.png)
+👉 **See [PLEX_GUIDE.md](./PLEX_GUIDE.md)** for the floor-by-floor layout, occupants, Jitsi
+rooms, the placeholder URLs to customise, the lift map, and how to edit it all live in the
+in-app Map Editor.
 
-Built on the official WorkAdventure [map-starter-kit](https://github.com/workadventure/map-starter-kit);
-the starter-kit tooling below still applies for building & re-uploading.
+![plex thumbnail](./office.png)
+
+Built on the official WorkAdventure [map-starter-kit](https://github.com/workadventure/map-starter-kit).
+The map set is regenerated deterministically by [`tools/build_plex.py`](./tools/build_plex.py)
+from [`tools/plex_specs.json`](./tools/plex_specs.json); the starter-kit tooling below still
+applies for building & re-uploading.
 
 ---
 

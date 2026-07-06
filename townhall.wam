@@ -1,0 +1,180 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "./townhall_base.tmj",
+  "areas": [
+    {
+      "id": "th-stage",
+      "x": 32,
+      "y": 96,
+      "width": 192,
+      "height": 64,
+      "visible": true,
+      "name": "All-hands Stage",
+      "properties": [
+        {
+          "id": "th-stage-focus",
+          "type": "focusable",
+          "zoom_margin": 0.3
+        },
+        {
+          "id": "th-stage-spk",
+          "type": "speakerMegaphone",
+          "name": "cloudza-townhall",
+          "chatEnabled": true,
+          "seeAttendees": true
+        }
+      ]
+    },
+    {
+      "id": "th-audience",
+      "x": 32,
+      "y": 160,
+      "width": 192,
+      "height": 256,
+      "visible": true,
+      "name": "All-hands Audience",
+      "properties": [
+        {
+          "id": "th-aud-lst",
+          "type": "listenerMegaphone",
+          "speakerZoneName": "cloudza-townhall",
+          "chatEnabled": true
+        }
+      ]
+    },
+    {
+      "id": "th-board",
+      "x": 256,
+      "y": 96,
+      "width": 96,
+      "height": 64,
+      "visible": true,
+      "name": "All-hands Notice Board",
+      "properties": [
+        {
+          "id": "th-board-web",
+          "type": "openWebsite",
+          "link": "https://REPLACE-ME.example.com/cloudza-allhands-agenda",
+          "trigger": "onaction",
+          "newTab": false,
+          "closable": true,
+          "width": 50,
+          "buttonLabel": "Open all-hands agenda",
+          "application": "website"
+        }
+      ]
+    },
+    {
+      "id": "th-mr-a",
+      "x": 384,
+      "y": 96,
+      "width": 160,
+      "height": 160,
+      "visible": true,
+      "name": "Overflow Room \u2014 Green",
+      "properties": [
+        {
+          "id": "th-mra-focus",
+          "type": "focusable",
+          "zoom_margin": 0.4
+        },
+        {
+          "id": "th-mra-jitsi",
+          "type": "jitsiRoomProperty",
+          "roomName": "cloudza-overflow-green",
+          "trigger": "onaction",
+          "closable": true,
+          "jitsiRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": false
+          },
+          "triggerMessage": "Press SPACE to join the Green overflow room"
+        }
+      ]
+    },
+    {
+      "id": "th-mr-b",
+      "x": 544,
+      "y": 192,
+      "width": 160,
+      "height": 192,
+      "visible": true,
+      "name": "Overflow Room \u2014 Purple",
+      "properties": [
+        {
+          "id": "th-mrb-focus",
+          "type": "focusable",
+          "zoom_margin": 0.4
+        },
+        {
+          "id": "th-mrb-jitsi",
+          "type": "jitsiRoomProperty",
+          "roomName": "cloudza-overflow-purple",
+          "trigger": "onaction",
+          "closable": true,
+          "jitsiRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": false
+          },
+          "triggerMessage": "Press SPACE to join the Purple overflow room"
+        }
+      ]
+    },
+    {
+      "id": "th-lift",
+      "x": 608,
+      "y": 96,
+      "width": 96,
+      "height": 64,
+      "visible": true,
+      "name": "\ud83d\uded7 Lift \u2192 Lobby",
+      "properties": [
+        {
+          "id": "th-lift-exit",
+          "type": "exit",
+          "url": "lobby.wam",
+          "areaName": "from-townhall"
+        }
+      ]
+    },
+    {
+      "id": "th-arrive",
+      "x": 640,
+      "y": 192,
+      "width": 32,
+      "height": 32,
+      "visible": true,
+      "name": "from-lobby",
+      "properties": [
+        {
+          "id": "th-arrive-start",
+          "type": "start",
+          "isDefault": true
+        }
+      ]
+    }
+  ],
+  "entities": {},
+  "entityCollections": [
+    {
+      "url": "http://play.workadventure.localhost/collections/FurnitureCollection.json",
+      "type": "file"
+    },
+    {
+      "url": "http://play.workadventure.localhost/collections/OfficeCollection.json",
+      "type": "file"
+    }
+  ],
+  "settings": {
+    "megaphone": {
+      "enabled": true,
+      "title": "CloudZA Plex \u2014 Townhall"
+    }
+  },
+  "metadata": {
+    "name": "CloudZA Plex \u2014 Townhall",
+    "description": "All-hands townhall & event space.",
+    "thumbnail": "conference.png",
+    "copyright": "Credits: WorkAdventure (https://WorkAdventu.re) \nLicense: CC-BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)"
+  }
+}

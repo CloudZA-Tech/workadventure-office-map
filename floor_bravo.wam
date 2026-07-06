@@ -1,0 +1,251 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "./office_base.tmj",
+  "areas": [
+    {
+      "id": "bravo-leader",
+      "x": 32,
+      "y": 96,
+      "width": 192,
+      "height": 128,
+      "visible": true,
+      "name": "Thandeka Mokoena \u2014 Head of Site Reliability Engineering (Team Bravo Lead)",
+      "properties": [
+        {
+          "id": "bravo-leader-focus",
+          "type": "focusable",
+          "zoom_margin": 0.4
+        },
+        {
+          "id": "bravo-leader-hl",
+          "type": "highlight",
+          "color": "#1f9d55",
+          "opacity": 0.35
+        },
+        {
+          "id": "bravo-leader-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Team Bravo team-leader office \u2014 Thandeka Mokoena, Head of Site Reliability Engineering.",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "bravo-m1",
+      "x": 256,
+      "y": 96,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Ruan Pretorius \u2014 Senior Platform Engineer",
+      "properties": [
+        {
+          "id": "bravo-m1-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "bravo-m1-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Ruan Pretorius's office (Senior Platform Engineer, Team Bravo).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "bravo-m2",
+      "x": 416,
+      "y": 96,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Naledi Dlamini \u2014 Incident & On-Call Lead",
+      "properties": [
+        {
+          "id": "bravo-m2-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "bravo-m2-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Naledi Dlamini's office (Incident & On-Call Lead, Team Bravo).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "bravo-m3",
+      "x": 256,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Yusuf Adams \u2014 Cloud Infrastructure Engineer",
+      "properties": [
+        {
+          "id": "bravo-m3-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "bravo-m3-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Yusuf Adams's office (Cloud Infrastructure Engineer, Team Bravo).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "bravo-m4",
+      "x": 416,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Lerato Nkosi \u2014 Observability & Reliability Engineer",
+      "properties": [
+        {
+          "id": "bravo-m4-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "bravo-m4-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Lerato Nkosi's office (Observability & Reliability Engineer, Team Bravo).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "bravo-meeting",
+      "x": 768,
+      "y": 256,
+      "width": 192,
+      "height": 160,
+      "visible": true,
+      "name": "The War Room (Incident Bridge)",
+      "properties": [
+        {
+          "id": "bravo-meeting-focus",
+          "type": "focusable",
+          "zoom_margin": 0.4
+        },
+        {
+          "id": "bravo-meeting-hl",
+          "type": "highlight",
+          "color": "#1f9d55",
+          "opacity": 0.3
+        },
+        {
+          "id": "bravo-meeting-jitsi",
+          "type": "jitsiRoomProperty",
+          "roomName": "cloudza-bravo-war-room",
+          "trigger": "onaction",
+          "closable": true,
+          "jitsiRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": false
+          },
+          "triggerMessage": "Press SPACE to join The War Room (Incident Bridge)"
+        }
+      ]
+    },
+    {
+      "id": "bravo-breakout",
+      "x": 640,
+      "y": 544,
+      "width": 224,
+      "height": 128,
+      "visible": true,
+      "name": "The Green Room",
+      "properties": [
+        {
+          "id": "bravo-breakout-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Grab a rooibos, decompress after a deploy, and swap war stories where nothing is on fire.",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "bravo-board",
+      "x": 32,
+      "y": 96,
+      "width": 96,
+      "height": 32,
+      "visible": true,
+      "name": "Bravo Ops Board \u2014 runbooks, on-call roster & incident retros",
+      "properties": [
+        {
+          "id": "bravo-board-web",
+          "type": "openWebsite",
+          "link": "https://REPLACE-ME.example.com/bravo-ops-board",
+          "trigger": "onaction",
+          "newTab": false,
+          "closable": true,
+          "width": 50,
+          "buttonLabel": "Open Team Bravo board",
+          "application": "website"
+        }
+      ]
+    },
+    {
+      "id": "bravo-lift",
+      "x": 32,
+      "y": 544,
+      "width": 64,
+      "height": 64,
+      "visible": true,
+      "name": "\ud83d\uded7 Lift \u2192 Lobby",
+      "properties": [
+        {
+          "id": "bravo-lift-exit",
+          "type": "exit",
+          "url": "lobby.wam",
+          "areaName": "from-bravo"
+        }
+      ]
+    },
+    {
+      "id": "bravo-arrive",
+      "x": 160,
+      "y": 608,
+      "width": 32,
+      "height": 32,
+      "visible": true,
+      "name": "from-lobby",
+      "properties": [
+        {
+          "id": "bravo-arrive-start",
+          "type": "start",
+          "isDefault": true
+        }
+      ]
+    }
+  ],
+  "entities": {},
+  "entityCollections": [
+    {
+      "url": "http://play.workadventure.localhost/collections/FurnitureCollection.json",
+      "type": "file"
+    },
+    {
+      "url": "http://play.workadventure.localhost/collections/OfficeCollection.json",
+      "type": "file"
+    }
+  ],
+  "settings": {
+    "megaphone": {
+      "enabled": true,
+      "title": "Team Bravo \u2014 Floor"
+    }
+  },
+  "metadata": {
+    "name": "Team Bravo \u2014 Floor",
+    "description": "The green-lit Team Bravo floor where CloudZA's SRE crew keeps the platform humming, tames incidents, and turns 3am pages into boring dashboards.",
+    "thumbnail": "office.png",
+    "copyright": null
+  }
+}

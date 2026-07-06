@@ -1,0 +1,251 @@
+{
+  "version": "2.1.0",
+  "mapUrl": "./office_base.tmj",
+  "areas": [
+    {
+      "id": "alpha-leader",
+      "x": 32,
+      "y": 96,
+      "width": 192,
+      "height": 128,
+      "visible": true,
+      "name": "Thandeka Mabaso \u2014 Head of Platform Engineering (Team Alpha Lead)",
+      "properties": [
+        {
+          "id": "alpha-leader-focus",
+          "type": "focusable",
+          "zoom_margin": 0.4
+        },
+        {
+          "id": "alpha-leader-hl",
+          "type": "highlight",
+          "color": "#2f6fed",
+          "opacity": 0.35
+        },
+        {
+          "id": "alpha-leader-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Team Alpha team-leader office \u2014 Thandeka Mabaso, Head of Platform Engineering.",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "alpha-m1",
+      "x": 256,
+      "y": 96,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Sipho Ndlovu \u2014 Senior Backend Engineer",
+      "properties": [
+        {
+          "id": "alpha-m1-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "alpha-m1-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Sipho Ndlovu's office (Senior Backend Engineer, Team Alpha).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "alpha-m2",
+      "x": 416,
+      "y": 96,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Charl van der Merwe \u2014 Site Reliability Engineer",
+      "properties": [
+        {
+          "id": "alpha-m2-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "alpha-m2-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Charl van der Merwe's office (Site Reliability Engineer, Team Alpha).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "alpha-m3",
+      "x": 256,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Aisha Patel \u2014 Frontend Engineer",
+      "properties": [
+        {
+          "id": "alpha-m3-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "alpha-m3-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Aisha Patel's office (Frontend Engineer, Team Alpha).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "alpha-m4",
+      "x": 416,
+      "y": 256,
+      "width": 128,
+      "height": 128,
+      "visible": true,
+      "name": "Lerato Mokoena \u2014 Product Designer",
+      "properties": [
+        {
+          "id": "alpha-m4-focus",
+          "type": "focusable",
+          "zoom_margin": 0.5
+        },
+        {
+          "id": "alpha-m4-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Lerato Mokoena's office (Product Designer, Team Alpha).",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "alpha-meeting",
+      "x": 768,
+      "y": 256,
+      "width": 192,
+      "height": 160,
+      "visible": true,
+      "name": "Alpha War Room",
+      "properties": [
+        {
+          "id": "alpha-meeting-focus",
+          "type": "focusable",
+          "zoom_margin": 0.4
+        },
+        {
+          "id": "alpha-meeting-hl",
+          "type": "highlight",
+          "color": "#2f6fed",
+          "opacity": 0.3
+        },
+        {
+          "id": "alpha-meeting-jitsi",
+          "type": "jitsiRoomProperty",
+          "roomName": "cloudza-alpha-war-room",
+          "trigger": "onaction",
+          "closable": true,
+          "jitsiRoomConfig": {
+            "startWithAudioMuted": true,
+            "startWithVideoMuted": false
+          },
+          "triggerMessage": "Press SPACE to join Alpha War Room"
+        }
+      ]
+    },
+    {
+      "id": "alpha-breakout",
+      "x": 640,
+      "y": 544,
+      "width": 224,
+      "height": 128,
+      "visible": true,
+      "name": "The Rooibos Lounge",
+      "properties": [
+        {
+          "id": "alpha-breakout-desc",
+          "type": "areaDescriptionProperties",
+          "description": "Grab a cuppa, swap war stories, and rubber-duck your gnarliest bug with a teammate.",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "id": "alpha-board",
+      "x": 32,
+      "y": 96,
+      "width": 96,
+      "height": 32,
+      "visible": true,
+      "name": "Alpha Notice Board",
+      "properties": [
+        {
+          "id": "alpha-board-web",
+          "type": "openWebsite",
+          "link": "https://REPLACE-ME.example.com/alpha-notice-board",
+          "trigger": "onaction",
+          "newTab": false,
+          "closable": true,
+          "width": 50,
+          "buttonLabel": "Open Team Alpha board",
+          "application": "website"
+        }
+      ]
+    },
+    {
+      "id": "alpha-lift",
+      "x": 32,
+      "y": 544,
+      "width": 64,
+      "height": 64,
+      "visible": true,
+      "name": "\ud83d\uded7 Lift \u2192 Lobby",
+      "properties": [
+        {
+          "id": "alpha-lift-exit",
+          "type": "exit",
+          "url": "lobby.wam",
+          "areaName": "from-alpha"
+        }
+      ]
+    },
+    {
+      "id": "alpha-arrive",
+      "x": 160,
+      "y": 608,
+      "width": 32,
+      "height": 32,
+      "visible": true,
+      "name": "from-lobby",
+      "properties": [
+        {
+          "id": "alpha-arrive-start",
+          "type": "start",
+          "isDefault": true
+        }
+      ]
+    }
+  ],
+  "entities": {},
+  "entityCollections": [
+    {
+      "url": "http://play.workadventure.localhost/collections/FurnitureCollection.json",
+      "type": "file"
+    },
+    {
+      "url": "http://play.workadventure.localhost/collections/OfficeCollection.json",
+      "type": "file"
+    }
+  ],
+  "settings": {
+    "megaphone": {
+      "enabled": true,
+      "title": "Team Alpha \u2014 Floor"
+    }
+  },
+  "metadata": {
+    "name": "Team Alpha \u2014 Floor",
+    "description": "The blue-lit Team Alpha floor where CloudZA's product and platform engineers turn ideas into shipping software, ringed by focus offices, a war room, and a coffee-fuelled breakout nook.",
+    "thumbnail": "office.png",
+    "copyright": null
+  }
+}
