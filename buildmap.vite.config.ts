@@ -1,6 +1,33 @@
 import 'dotenv/config';
-import { defineConfig } from "vite";
+import fs from "fs";
+import path from "path";
+import { defineConfig, Plugin } from "vite";
 import { getMaps, getMapsOptimizers, getMapsScripts, LogLevel, OptimizeOptions } from "wa-map-optimizer-vite";
+
+// getMaps()/getMapsOptimizers() only process .tmj files (e.g. office_base.tmj,
+// townhall_base.tmj). Our actual rooms (lobby.wam, floor_alpha.wam,
+// floor_bravo.wam, floor_charlie.wam, townhall.wam) are hand-built .wam files
+// referencing those base .tmj layouts — they were never copied into dist/, so
+// upload-wa-map never uploaded them and START_ROOM_URL pointed at a 404.
+// This copies every top-level .wam file into the build output so any room
+// added in the future is picked up automatically too.
+function copyRoomWamFiles(): Plugin {
+    let outDir = "dist";
+    return {
+        name: "copy-room-wam-files",
+        configResolved(config) {
+            outDir = config.build.outDir;
+        },
+        closeBundle() {
+            const root = process.cwd();
+            for (const file of fs.readdirSync(root)) {
+                if (file.endsWith(".wam")) {
+                    fs.copyFileSync(path.join(root, file), path.join(outDir, file));
+                }
+            }
+        },
+    };
+}
 
 const maps = getMaps();
 
@@ -36,5 +63,6 @@ export default defineConfig({
     },
     plugins: [
         ...getMapsOptimizers(maps, optimizerOptions),
+        copyRoomWamFiles(),
     ],
 });
