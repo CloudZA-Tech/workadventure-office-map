@@ -1,0 +1,180 @@
+{
+    "version": "2.1.0",
+    "mapUrl": "./conference.tmj",
+    "areas": [
+        {
+            "id": "cf-stage",
+            "x": 32,
+            "y": 96,
+            "width": 192,
+            "height": 64,
+            "visible": true,
+            "name": "Townhall Stage",
+            "properties": [
+                {
+                    "id": "cf-stage-focus",
+                    "type": "focusable",
+                    "zoom_margin": 0.3
+                },
+                {
+                    "id": "cf-stage-spk",
+                    "type": "speakerMegaphone",
+                    "name": "townhall",
+                    "chatEnabled": true,
+                    "seeAttendees": true
+                }
+            ]
+        },
+        {
+            "id": "cf-audience",
+            "x": 32,
+            "y": 160,
+            "width": 192,
+            "height": 256,
+            "visible": true,
+            "name": "Townhall Audience",
+            "properties": [
+                {
+                    "id": "cf-audience-lst",
+                    "type": "listenerMegaphone",
+                    "speakerZoneName": "townhall",
+                    "chatEnabled": true
+                }
+            ]
+        },
+        {
+            "id": "cf-board",
+            "x": 256,
+            "y": 96,
+            "width": 96,
+            "height": 64,
+            "visible": true,
+            "name": "Event Notice Board",
+            "properties": [
+                {
+                    "id": "cf-board-p",
+                    "type": "openWebsite",
+                    "link": "https://REPLACE-ME.example.com/townhall-agenda",
+                    "trigger": "onaction",
+                    "newTab": false,
+                    "closable": true,
+                    "width": 50,
+                    "buttonLabel": "Open the event agenda",
+                    "application": "website"
+                }
+            ]
+        },
+        {
+            "id": "cf-mr3",
+            "x": 384,
+            "y": 96,
+            "width": 160,
+            "height": 160,
+            "visible": true,
+            "name": "Meeting Room \u2014 Green",
+            "properties": [
+                {
+                    "id": "cf-mr3-focus",
+                    "type": "focusable",
+                    "zoom_margin": 0.4
+                },
+                {
+                    "id": "cf-mr3-jitsi",
+                    "type": "jitsiRoomProperty",
+                    "roomName": "conf-green",
+                    "trigger": "onaction",
+                    "closable": true,
+                    "jitsiRoomConfig": {
+                        "startWithAudioMuted": true,
+                        "startWithVideoMuted": false
+                    },
+                    "triggerMessage": "Press SPACE to join the Green meeting room"
+                }
+            ]
+        },
+        {
+            "id": "cf-mr4",
+            "x": 544,
+            "y": 192,
+            "width": 160,
+            "height": 192,
+            "visible": true,
+            "name": "Meeting Room \u2014 Purple",
+            "properties": [
+                {
+                    "id": "cf-mr4-focus",
+                    "type": "focusable",
+                    "zoom_margin": 0.4
+                },
+                {
+                    "id": "cf-mr4-jitsi",
+                    "type": "jitsiRoomProperty",
+                    "roomName": "conf-purple",
+                    "trigger": "onaction",
+                    "closable": true,
+                    "jitsiRoomConfig": {
+                        "startWithAudioMuted": true,
+                        "startWithVideoMuted": false
+                    },
+                    "triggerMessage": "Press SPACE to join the Purple meeting room"
+                }
+            ]
+        },
+        {
+            "id": "cf-to-office",
+            "x": 608,
+            "y": 96,
+            "width": 96,
+            "height": 64,
+            "visible": true,
+            "name": "To Office",
+            "properties": [
+                {
+                    "id": "cf-to-office-p",
+                    "type": "exit",
+                    "url": "office.wam",
+                    "areaName": "from-conference"
+                }
+            ]
+        },
+        {
+            "id": "cf-from-office",
+            "x": 640,
+            "y": 160,
+            "width": 32,
+            "height": 32,
+            "visible": true,
+            "name": "from-office",
+            "properties": [
+                {
+                    "id": "cf-from-office-p",
+                    "type": "start",
+                    "isDefault": true
+                }
+            ]
+        }
+    ],
+    "entities": {},
+    "entityCollections": [
+        {
+            "url": "http://play.workadventure.localhost/collections/FurnitureCollection.json",
+            "type": "file"
+        },
+        {
+            "url": "http://play.workadventure.localhost/collections/OfficeCollection.json",
+            "type": "file"
+        }
+    ],
+    "settings": {
+        "megaphone": {
+            "enabled": true,
+            "title": "Townhall"
+        }
+    },
+    "metadata": {
+        "name": "Townhall & Event Space",
+        "description": "Event space with an all-hands townhall stage (megaphone) plus extra Jitsi meeting rooms.",
+        "thumbnail": "conference.png",
+        "copyright": "Credits: WorkAdventure (https://WorkAdventu.re) \nLicense: CC-BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)"
+    }
+}
