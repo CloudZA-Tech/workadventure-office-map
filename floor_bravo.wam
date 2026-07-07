@@ -1,13 +1,14 @@
 {
   "version": "2.1.0",
   "mapUrl": "./floor_bravo_base.tmj",
+  "entities": {},
   "areas": [
     {
-      "id": "bravo-leader",
       "x": 32,
       "y": 96,
       "width": 192,
       "height": 128,
+      "id": "bravo-leader",
       "visible": true,
       "name": "Thandeka Mokoena \u2014 Head of Site Reliability Engineering (Team Bravo Lead)",
       "properties": [
@@ -19,8 +20,10 @@
         {
           "id": "bravo-leader-hl",
           "type": "highlight",
-          "color": "#1f9d55",
-          "opacity": 0.35
+          "opacity": 0.35,
+          "gradientWidth": 10,
+          "duration": 250,
+          "color": "#1f9d55"
         },
         {
           "id": "bravo-leader-desc",
@@ -31,11 +34,11 @@
       ]
     },
     {
-      "id": "bravo-m1",
       "x": 256,
       "y": 96,
       "width": 128,
       "height": 128,
+      "id": "bravo-m1",
       "visible": true,
       "name": "Ruan Pretorius \u2014 Senior Platform Engineer",
       "properties": [
@@ -53,11 +56,11 @@
       ]
     },
     {
-      "id": "bravo-m2",
       "x": 416,
       "y": 96,
       "width": 128,
       "height": 128,
+      "id": "bravo-m2",
       "visible": true,
       "name": "Naledi Dlamini \u2014 Incident & On-Call Lead",
       "properties": [
@@ -75,11 +78,11 @@
       ]
     },
     {
-      "id": "bravo-m3",
       "x": 256,
       "y": 256,
       "width": 128,
       "height": 128,
+      "id": "bravo-m3",
       "visible": true,
       "name": "Yusuf Adams \u2014 Cloud Infrastructure Engineer",
       "properties": [
@@ -97,11 +100,11 @@
       ]
     },
     {
-      "id": "bravo-m4",
       "x": 416,
       "y": 256,
       "width": 128,
       "height": 128,
+      "id": "bravo-m4",
       "visible": true,
       "name": "Lerato Nkosi \u2014 Observability & Reliability Engineer",
       "properties": [
@@ -119,11 +122,11 @@
       ]
     },
     {
-      "id": "bravo-meeting",
       "x": 768,
       "y": 256,
       "width": 192,
       "height": 160,
+      "id": "bravo-meeting",
       "visible": true,
       "name": "The War Room (Incident Bridge)",
       "properties": [
@@ -135,29 +138,31 @@
         {
           "id": "bravo-meeting-hl",
           "type": "highlight",
-          "color": "#1f9d55",
-          "opacity": 0.3
+          "opacity": 0.3,
+          "gradientWidth": 10,
+          "duration": 250,
+          "color": "#1f9d55"
         },
         {
           "id": "bravo-meeting-jitsi",
           "type": "jitsiRoomProperty",
           "roomName": "cloudza-bravo-war-room",
-          "trigger": "onaction",
           "closable": true,
+          "trigger": "onaction",
+          "triggerMessage": "Press SPACE to join The War Room (Incident Bridge)",
           "jitsiRoomConfig": {
             "startWithAudioMuted": true,
             "startWithVideoMuted": false
-          },
-          "triggerMessage": "Press SPACE to join The War Room (Incident Bridge)"
+          }
         }
       ]
     },
     {
-      "id": "bravo-breakout",
       "x": 640,
       "y": 544,
       "width": 224,
       "height": 128,
+      "id": "bravo-breakout",
       "visible": true,
       "name": "The Green Room",
       "properties": [
@@ -170,50 +175,59 @@
       ]
     },
     {
-      "id": "bravo-board",
       "x": 32,
       "y": 96,
       "width": 96,
       "height": 32,
+      "id": "bravo-board",
       "visible": true,
       "name": "Bravo Ops Board \u2014 runbooks, on-call roster & incident retros",
       "properties": [
         {
           "id": "bravo-board-web",
+          "buttonLabel": "Open Team Bravo board",
           "type": "openWebsite",
           "link": "https://REPLACE-ME.example.com/bravo-ops-board",
-          "trigger": "onaction",
           "newTab": false,
           "closable": true,
+          "trigger": "onaction",
           "width": 50,
-          "buttonLabel": "Open Team Bravo board",
-          "application": "website"
+          "application": "website",
+          "forceNewTab": false,
+          "hideUrl": false
         }
       ]
     },
     {
-      "id": "bravo-lift",
-      "x": 32,
-      "y": 544,
+      "x": 6,
+      "y": 501,
       "width": 64,
       "height": 64,
+      "id": "bravo-lift",
       "visible": true,
-      "name": "\ud83d\uded7 Lift \u2192 Lobby",
+      "name": "\ud83d\uded7 Lift \u2192 Floor Alpha",
       "properties": [
         {
           "id": "bravo-lift-exit",
           "type": "exit",
-          "url": "lobby.wam",
-          "areaName": "from-bravo"
+          "url": "/~/plex/floor_alpha.wam",
+          "areaName": "from-lobby"
+        },
+        {
+          "id": "0d728be4-a15b-4bb0-8898-9cc62d77e633",
+          "type": "areaDescriptionProperties",
+          "description": "",
+          "searchable": false
         }
-      ]
+      ],
+      "modifyProperties": true
     },
     {
-      "id": "bravo-arrive",
-      "x": 160,
-      "y": 608,
+      "x": 119,
+      "y": 538,
       "width": 32,
       "height": 32,
+      "id": "bravo-arrive",
       "visible": true,
       "name": "from-lobby",
       "properties": [
@@ -221,11 +235,39 @@
           "id": "bravo-arrive-start",
           "type": "start",
           "isDefault": true
+        },
+        {
+          "id": "3c183937-3a96-42b6-a5d9-bb32b0f2f1ea",
+          "type": "areaDescriptionProperties",
+          "description": "",
+          "searchable": false
+        }
+      ]
+    },
+    {
+      "x": 931,
+      "y": 127,
+      "width": 32,
+      "height": 61,
+      "id": "a0fe39b9-4284-4a41-8b68-4d117be2e2be",
+      "visible": true,
+      "name": "",
+      "properties": [
+        {
+          "id": "48c8f418-f74d-4eef-82bb-f281bdc817a7",
+          "type": "areaDescriptionProperties",
+          "description": "",
+          "searchable": false
+        },
+        {
+          "id": "ea4b66f7-7127-4016-8273-b6b3ef1dfdfe",
+          "type": "exit",
+          "url": "/~/plex/floor_charlie.wam",
+          "areaName": "from-lobby"
         }
       ]
     }
   ],
-  "entities": {},
   "entityCollections": [
     {
       "url": "http://play.workadventure.localhost/collections/FurnitureCollection.json",
@@ -236,6 +278,7 @@
       "type": "file"
     }
   ],
+  "lastCommandId": "2a427887-f6a0-4ca2-a15d-a3c06e13b551",
   "settings": {
     "megaphone": {
       "enabled": true,
@@ -245,7 +288,7 @@
   "metadata": {
     "name": "Team Bravo \u2014 Floor",
     "description": "The green-lit Team Bravo floor where CloudZA's SRE crew keeps the platform humming, tames incidents, and turns 3am pages into boring dashboards.",
-    "thumbnail": "office.png",
-    "copyright": null
+    "copyright": null,
+    "thumbnail": "office.png"
   }
 }
