@@ -1,6 +1,6 @@
 {
   "version": "2.1.0",
-  "mapUrl": "./office_base.tmj",
+  "mapUrl": "./floor_charlie_base.tmj",
   "areas": [
     {
       "id": "charlie-leader",
