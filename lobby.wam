@@ -208,6 +208,29 @@
           "type": "start"
         }
       ]
+    },
+    {
+      "id": "lobby-campus-exit",
+      "x": 224,
+      "y": 352,
+      "width": 64,
+      "height": 64,
+      "visible": true,
+      "name": "\ud83c\udf06 Exit to CloudZAPlex Campus",
+      "properties": [
+        {
+          "id": "lobby-campus-exit-hl",
+          "type": "highlight",
+          "color": "#8a3ffc",
+          "opacity": 0.3
+        },
+        {
+          "id": "lobby-campus-exit-go",
+          "type": "exit",
+          "url": "/_/global/workadventure.dev.cloudza.tech/map-storage/cloudzaplex/map.tmj",
+          "areaName": ""
+        }
+      ]
     }
   ],
   "entities": {},
