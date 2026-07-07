@@ -1,13 +1,14 @@
 {
   "version": "2.1.0",
   "mapUrl": "./floor_charlie_base.tmj",
+  "entities": {},
   "areas": [
     {
-      "id": "charlie-leader",
       "x": 32,
       "y": 96,
       "width": 192,
       "height": 128,
+      "id": "charlie-leader",
       "visible": true,
       "name": "Naledi Khumalo \u2014 Head of Data & AI (Team Charlie Lead)",
       "properties": [
@@ -19,8 +20,10 @@
         {
           "id": "charlie-leader-hl",
           "type": "highlight",
-          "color": "#e0a800",
-          "opacity": 0.35
+          "opacity": 0.35,
+          "gradientWidth": 10,
+          "duration": 250,
+          "color": "#e0a800"
         },
         {
           "id": "charlie-leader-desc",
@@ -31,11 +34,11 @@
       ]
     },
     {
-      "id": "charlie-m1",
       "x": 256,
       "y": 96,
       "width": 128,
       "height": 128,
+      "id": "charlie-m1",
       "visible": true,
       "name": "Tumelo Sithole \u2014 Machine Learning Engineer",
       "properties": [
@@ -53,11 +56,11 @@
       ]
     },
     {
-      "id": "charlie-m2",
       "x": 416,
       "y": 96,
       "width": 128,
       "height": 128,
+      "id": "charlie-m2",
       "visible": true,
       "name": "Anja van Rensburg \u2014 Data Engineer",
       "properties": [
@@ -75,11 +78,11 @@
       ]
     },
     {
-      "id": "charlie-m3",
       "x": 256,
       "y": 256,
       "width": 128,
       "height": 128,
+      "id": "charlie-m3",
       "visible": true,
       "name": "Rudzani Mahlangu \u2014 Analytics Engineer",
       "properties": [
@@ -97,11 +100,11 @@
       ]
     },
     {
-      "id": "charlie-m4",
       "x": 416,
       "y": 256,
       "width": 128,
       "height": 128,
+      "id": "charlie-m4",
       "visible": true,
       "name": "Kayleigh Naidoo \u2014 Data Scientist",
       "properties": [
@@ -119,11 +122,11 @@
       ]
     },
     {
-      "id": "charlie-meeting",
       "x": 768,
       "y": 256,
       "width": 192,
       "height": 160,
+      "id": "charlie-meeting",
       "visible": true,
       "name": "The Feature Store",
       "properties": [
@@ -135,29 +138,31 @@
         {
           "id": "charlie-meeting-hl",
           "type": "highlight",
-          "color": "#e0a800",
-          "opacity": 0.3
+          "opacity": 0.3,
+          "gradientWidth": 10,
+          "duration": 250,
+          "color": "#e0a800"
         },
         {
           "id": "charlie-meeting-jitsi",
           "type": "jitsiRoomProperty",
           "roomName": "cloudza-charlie-feature-store",
-          "trigger": "onaction",
           "closable": true,
+          "trigger": "onaction",
+          "triggerMessage": "Press SPACE to join The Feature Store",
           "jitsiRoomConfig": {
             "startWithAudioMuted": true,
             "startWithVideoMuted": false
-          },
-          "triggerMessage": "Press SPACE to join The Feature Store"
+          }
         }
       ]
     },
     {
-      "id": "charlie-breakout",
       "x": 640,
       "y": 544,
       "width": 224,
       "height": 128,
+      "id": "charlie-breakout",
       "visible": true,
       "name": "The Data Lake Lounge",
       "properties": [
@@ -170,50 +175,59 @@
       ]
     },
     {
-      "id": "charlie-board",
       "x": 32,
       "y": 96,
       "width": 96,
       "height": 32,
+      "id": "charlie-board",
       "visible": true,
       "name": "Charlie Model Board",
       "properties": [
         {
           "id": "charlie-board-web",
+          "buttonLabel": "Open Team Charlie board",
           "type": "openWebsite",
           "link": "https://REPLACE-ME.example.com/charlie-model-board",
-          "trigger": "onaction",
           "newTab": false,
           "closable": true,
+          "trigger": "onaction",
           "width": 50,
-          "buttonLabel": "Open Team Charlie board",
-          "application": "website"
+          "application": "website",
+          "forceNewTab": false,
+          "hideUrl": false
         }
       ]
     },
     {
-      "id": "charlie-lift",
-      "x": 32,
-      "y": 544,
+      "x": 7,
+      "y": 507,
       "width": 64,
       "height": 64,
+      "id": "charlie-lift",
       "visible": true,
-      "name": "\ud83d\uded7 Lift \u2192 Lobby",
+      "name": "\ud83d\uded7 Lift \u2192 Floor Bravo",
       "properties": [
         {
           "id": "charlie-lift-exit",
           "type": "exit",
-          "url": "lobby.wam",
-          "areaName": "from-charlie"
+          "url": "/~/plex/floor_bravo.wam",
+          "areaName": "from-lobby"
+        },
+        {
+          "id": "af99eef4-0240-4c30-b2cf-28c7a6f121d8",
+          "type": "areaDescriptionProperties",
+          "description": "",
+          "searchable": false
         }
-      ]
+      ],
+      "modifyProperties": false
     },
     {
-      "id": "charlie-arrive",
-      "x": 160,
-      "y": 608,
+      "x": 120,
+      "y": 528,
       "width": 32,
       "height": 32,
+      "id": "charlie-arrive",
       "visible": true,
       "name": "from-lobby",
       "properties": [
@@ -221,11 +235,17 @@
           "id": "charlie-arrive-start",
           "type": "start",
           "isDefault": true
+        },
+        {
+          "id": "ea01d415-e515-4399-b69c-7740a20d4563",
+          "type": "areaDescriptionProperties",
+          "description": "",
+          "searchable": false
         }
-      ]
+      ],
+      "modifyProperties": true
     }
   ],
-  "entities": {},
   "entityCollections": [
     {
       "url": "http://play.workadventure.localhost/collections/FurnitureCollection.json",
@@ -245,7 +265,8 @@
   "metadata": {
     "name": "Team Charlie \u2014 Floor",
     "description": "The amber-lit Charlie floor where CloudZA's data and AI crew mine insight from noise, ship models, and keep the pipelines humming.",
-    "thumbnail": "office.png",
-    "copyright": null
-  }
+    "copyright": null,
+    "thumbnail": "office.png"
+  },
+  "lastCommandId": "cfcc3be4-82be-4b11-93ad-2374fb591223"
 }
