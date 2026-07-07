@@ -194,7 +194,7 @@
     {
       "id": "alpha-lift",
       "x": 32,
-      "y": 544,
+      "y": 512,
       "width": 64,
       "height": 64,
       "visible": true,
@@ -210,8 +210,8 @@
     },
     {
       "id": "alpha-arrive",
-      "x": 160,
-      "y": 608,
+      "x": 96,
+      "y": 544,
       "width": 32,
       "height": 32,
       "visible": true,
