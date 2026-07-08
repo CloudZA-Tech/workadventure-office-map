@@ -3,13 +3,13 @@
   "mapUrl": "./map.tmj",
   "entities": {
     "b0cc3417-c605-445a-8a92-2aaee04b16dd": {
-      "prefabRef": {
-        "id": "12e02038-f8ce-4289-8d78-0d0d0d463dd5",
-        "collectionName": "custom entities"
-      },
       "x": 1224,
       "y": 1807,
-      "properties": []
+      "properties": [],
+      "prefabRef": {
+        "collectionName": "custom entities",
+        "id": "12e02038-f8ce-4289-8d78-0d0d0d463dd5"
+      }
     }
   },
   "areas": [
@@ -42,10 +42,10 @@
       ]
     },
     {
-      "x": 320,
-      "y": 640,
-      "width": 1760,
-      "height": 704,
+      "x": 0,
+      "y": 0,
+      "width": 2528,
+      "height": 2944,
       "id": "a9ca079c-b6db-4fbf-b55a-192d2ab7c0b1",
       "visible": true,
       "name": "PodiumBroadcastArea",
@@ -63,7 +63,8 @@
           "description": "",
           "searchable": false
         }
-      ]
+      ],
+      "modifyProperties": false
     },
     {
       "x": 317,
@@ -344,8 +345,28 @@
           "searchable": false
         }
       ]
+    },
+    {
+      "id": "99cb525c-9524-4eeb-b39e-c9fba3fa3645",
+      "x": 1664,
+      "y": 160,
+      "width": 864,
+      "height": 704,
+      "visible": true,
+      "name": "CrucialConference Meet",
+      "properties": [
+        {
+          "id": "9c876113-01a7-41f0-869e-5547d01362ce",
+          "type": "openWebsite",
+          "link": "https://meet.google.com/tcm-ixnq-wyo",
+          "newTab": true,
+          "trigger": "onicon",
+          "buttonLabel": "Join Google Meet",
+          "application": "website"
+        }
+      ]
     }
   ],
   "entityCollections": [],
-  "lastCommandId": "095c83b8-69ca-4637-aa14-cf651a5cfa4c"
+  "lastCommandId": "aa3afe2c-9826-4aa6-90cb-e11cafcd0293"
 }
