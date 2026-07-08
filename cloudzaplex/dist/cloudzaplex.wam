@@ -42,10 +42,10 @@
       ]
     },
     {
-      "x": -2,
-      "y": 2,
-      "width": 2528,
-      "height": 2944,
+      "x": 320,
+      "y": 640,
+      "width": 1760,
+      "height": 704,
       "id": "a9ca079c-b6db-4fbf-b55a-192d2ab7c0b1",
       "visible": true,
       "name": "PodiumBroadcastArea",
