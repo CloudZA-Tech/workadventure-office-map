@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 .env.secret
 dist.zip
+
+# CloudZAPlex keeps its deployment snapshot committed (own build tooling,
+# not part of the root build-and-deploy.yml pipeline) - see cloudzaplex/README.md
+!cloudzaplex/dist/
+!cloudzaplex/dist/**
