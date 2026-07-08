@@ -14,59 +14,6 @@
   },
   "areas": [
     {
-      "x": 768,
-      "y": 1088,
-      "width": 352,
-      "height": 220,
-      "id": "1d7b05dc-3e9c-4c86-b962-2ceb806506fb",
-      "visible": true,
-      "name": "Podium",
-      "properties": [
-        {
-          "id": "51a34328-61d3-4bf8-9d18-3505c87b96a4",
-          "type": "speakerMegaphone",
-          "name": "MainPodium",
-          "chatEnabled": false,
-          "seeAttendees": true
-        },
-        {
-          "id": "51a34328-61d3-4bf8-9d18-3505c87b96a4-lock",
-          "type": "lockableAreaPropertyData"
-        },
-        {
-          "id": "0bb673a3-daba-49af-af89-486aa4a3c391",
-          "type": "areaDescriptionProperties",
-          "description": "",
-          "searchable": false
-        }
-      ]
-    },
-    {
-      "x": 0,
-      "y": 0,
-      "width": 2528,
-      "height": 2944,
-      "id": "a9ca079c-b6db-4fbf-b55a-192d2ab7c0b1",
-      "visible": true,
-      "name": "PodiumBroadcastArea",
-      "properties": [
-        {
-          "id": "0b53d753-211d-4422-802c-fc75bab3154a",
-          "type": "listenerMegaphone",
-          "speakerZoneName": "1d7b05dc-3e9c-4c86-b962-2ceb806506fb",
-          "chatEnabled": false,
-          "allowTalking": false
-        },
-        {
-          "id": "61913823-2ac2-4aa8-95d4-671e248bb85e",
-          "type": "areaDescriptionProperties",
-          "description": "",
-          "searchable": false
-        }
-      ],
-      "modifyProperties": false
-    },
-    {
       "x": 317,
       "y": 160,
       "width": 71,
@@ -368,5 +315,12 @@
     }
   ],
   "entityCollections": [],
-  "lastCommandId": "aa3afe2c-9826-4aa6-90cb-e11cafcd0293"
+  "lastCommandId": "aa3afe2c-9826-4aa6-90cb-e11cafcd0293",
+  "settings": {
+    "megaphone": {
+      "enabled": true,
+      "title": "CloudZAPlex Podium",
+      "scope": "ROOM"
+    }
+  }
 }
